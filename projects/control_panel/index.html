@@ -1,0 +1,113 @@
+
+<html>
+  <head>
+
+    <title>Control Panel Design</title>
+  
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+  
+  </head>
+  
+  <body>
+
+    <div id="main">
+      <p>
+        <h1 align="center">BENCHMARK Network and Data Security System</h1>
+      </p>
+    </div>
+
+    
+    <div id="container">
+
+      <div id="isecurit">
+        <h1>i-SECURIT</h1>
+        <br>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_start=true" ><input type="button" style="width:150px" name="start" id="securit_start" value="Start"></a>
+        </p>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_stop=true" ><input type="button" style="width:150px" name="off" id="securit_off" value= "Shutdown"> </a>
+        </p>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_restart=true" ><input type="button" style="width:150px" name="restart" id="securit_restart" value= "Restart"> </a>
+        </p>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_experiments=true"><input type="button" style="width:150px" name="experiments" id="securit_experiments" value= "Experiments"> </a>
+        </p>
+
+        <p></p><br><p></p>
+
+         <p>
+          <a href="PHP/status.php?isecurit_status=true" ><input type="button" style="width:150px" name="refresh" id="refresh" value="Running Status"></a>
+        </p>
+
+
+
+
+      </div>
+
+      <div id="isecurit_projects">
+        <h1>i-SECURIT Projects</h1>
+        <br>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_projects_start=true"><input type="button" style="width:150px" name="2_start" id="isecurit_projects_start" value="Start"></a>
+        </p>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_projects_stop=true" ><input type="button" style="width:150px" name="2_off" id="isecurit_projects_off" value= "Shutdown"> </a>
+        </p>
+        
+        <p>
+          <a href="PHP/manage.php?isecurit_restart=true" ><input type="button" style="width:150px" name="2_restart" id="securit_restart" value= "Restart"> </a>
+        </p>
+
+        <p>
+          <!--
+          <a href="PHP/manage.php?isecurit_projects_experiments=true" target="_blank"><input type="button" style="width:150px" name="experiments" id="isecurit_projects_experiments" value= "Experiments"> </a>
+          -->
+          <a href="PHP/project_experiments.php"><input type="button" style="width:150px" name="2_experiments" id="isecurit_projects_experiments" value= "Experiments"> </a>
+
+        </p>
+
+        <p></p><br><p></p>
+        
+        <p>
+          <a href="PHP/status.php?isecurit_projects_status=true" ><input type="button" style="width:150px" name="2_refresh" id="refresh" value="Running Status "></a>
+        </p>
+
+        <p></p><br><p></p>
+        <p>
+          <h3>Upload the zip file</h3>
+          <form action="PHP/project_upload.php" method="post" enctype="multipart/form-data"> <!--In the end discard the upload.php file-->
+            <input type="file" name="zip_file" value="Choose File" />
+            <input type="submit" value="Upload File" />
+          </form> 
+        </p>
+
+      </div>
+        
+  
+
+      <div id="host_status">
+
+        <p></p>
+        <p>
+          <a href="PHP/host_manage.php?host_off=true" ><input type="button" style="width: 150px" name="host_start" id="host_off" value="SHUT DOWN"></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="PHP/host_manage.php?host_restart=true"><input type="button" style="width: 150px" name="host_restart" id="host_restart" value= "RESTART"></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="HTML/login.html" target="_blank"><input type="button" style="width: 150px" name="host_advanced" id="login" value= "MANAGE"> </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

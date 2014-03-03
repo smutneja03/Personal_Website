@@ -1,0 +1,95 @@
+
+
+<html>    
+
+  <head>
+    <title>Login/Register</title>
+    
+    <style type="text/css">
+      body{
+        background:black;
+        color:#80c0c0;
+        width: 100%;
+      }
+
+      #container{
+        margin-top: 13%;
+      	margin-left: 10%;
+      	margin-right: 10%;
+
+      }
+
+      #register{
+
+      	margin-left : 10%;
+      	width:30%;
+      	height:40%;
+        float:left;
+        border: 1px solid red;
+        text-align: center;
+
+      }
+
+      #login{
+
+      	margin-left : 5%;
+      	width:30%;
+      	height:40%;
+        float:left;
+        border: 1px solid red;
+        text-align: center;
+
+      }
+
+  </style>
+
+  </head>
+  
+  <body>
+
+  	<div id="container">
+
+        <form action="registration.php" method="POST"> 
+        <div id="register">
+          <h2>New User, Please Register</h2>
+          <p>
+            User Name: <br><input type="text" name="username" size="30"><br>
+          </p>
+          <p>
+            E-Mail: <br><input type="text" name="email" size="30"><br>
+          </p>
+          <p>
+            Password: <br><input type="password" name="password" size="30"><br>
+          </p>
+          <p>
+            <input type="submit" name="register" value="Register!!">
+          </p>
+        </div> 
+      </form>
+
+      
+
+      
+        <form action="log.php" method="POST" > 
+        <div id="login">
+          <h2>Please Login</h2>
+          <p>
+            User Name: <br><input type="text" name="user_name" id="user_name" size="30"><br>
+          </p>
+          <p>
+            Password: <br><input type="password" name="pass_word" id="pass_word" size="30"><br>
+          </p>
+          <p>
+            <input type="submit" name="login" value="Login!">
+          </p>
+        </div>
+      </form>
+     
+
+	 
+
+	</div>
+
+  </body>
+
+</html>

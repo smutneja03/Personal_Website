@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Sign Up</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+    
+    <style type="text/css">
+      
+      a:hover{
+      
+        text-decoration: none;
+      
+      }
+
+      a{
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+      }
+    
+    </style>
+
+    <script type="text/javascript">
+
+        function validate(){
+          if( document.myForm.username.value == "" ){
+          alert( "Please provide your name!" );
+          document.myForm.Name.focus() ;
+          return false;
+          }
+          
+          if( document.myForm.password.value == "" ){
+            alert( "Please provide your Password!");
+            document.myForm.EMail.focus() ;
+            return false;
+          }
+          
+          if( document.myForm.email.value == "" ){
+            alert( "Please provide your Email!");
+            document.myForm.EMail.focus() ;
+            return false;
+          }
+
+          
+          var emailID = document.myForm.email.value;
+          atpos = emailID.indexOf("@");
+          dotpos = emailID.lastIndexOf(".");
+          if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.EMail.focus() ;
+            return false;
+          }
+             
+          return true ;
+          
+        }
+
+    </script>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="registration.php" method="POST" name="myForm" onsubmit="return(validate());">
+
+        <h2 class="form-signin-heading">Please register</h2>
+
+        <input type="username" class="form-control" placeholder="username" name="username" required autofocus>
+        <input type="email" class="form-control" placeholder="your@email.com" name="email" required>        
+        <input type="password" class="form-control" placeholder="password" name="password" required>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        
+        <a href="index.html" > 
+          <input type = "button" class="btn btn-lg btn-primary btn-block" value = "Sign In" />
+        </a>
+      
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

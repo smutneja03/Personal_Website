@@ -1,0 +1,313 @@
+
+
+		body{
+			background:black;
+			color:#80c0c0;
+			width: 100%;
+		}
+
+		img{
+		}
+
+		a{
+     
+     		text-decoration: none;
+    	
+    	}
+		
+		#links{
+
+			float: right;
+			margin-right: 5%
+		}
+
+		span {
+    		text-decoration:underline;
+		    color:blue;
+		    cursor:pointer;
+		}
+
+		p{
+			font-size:17px;
+			font-family: helvetica;
+			text-align: center;
+		}
+
+		#objective{
+
+			margin-top: 5%;
+	        margin-left: 10%;
+	        margin-right: 10%;
+	        color:white;
+	        border: 1px solid red;
+	        text-align: center;
+		}
+
+		#objective p{
+			color: white;
+		}
+
+		#concepts{
+			margin-top: 5%;
+	        margin-left: 10%;
+	        margin-right: 10%;
+	        color:white;
+	        border: 1px solid red;
+
+		}
+
+		#concepts ul{
+
+			font-size: 19px;
+		}
+
+		#intro{
+
+			margin-top: 5%;
+	        margin-left: 10%;
+	        margin-right: 10%;
+	        color:white;
+	        border: 1px solid red;
+	        text-align: center;
+
+		}
+
+		#intro img{
+			
+		}
+
+		#algorithm{
+	
+			margin-top: 4%;
+	        margin-left: 3%;
+	        margin-right: 3%;
+	        color:white;
+	        border: 1px solid red;
+	        text-align: center;
+
+		}
+
+		#brief_description{
+			
+			margin-top: 5%;
+	        margin-left: 10%;
+	        margin-right: 10%;
+	        color:white;
+	        border: 1px solid red;
+
+	        text-align: center;
+
+		}
+
+		#code_snippet{
+
+			margin-top: 5%;
+	        margin-left: 10%;
+	        margin-right: 10%;
+	        color:white;
+	        border: 1px solid red;
+	        text-align: center;
+		}
+
+		#brief_description img, #code_snippet img{
+
+			height: 480px;
+			width: 690px; 
+			
+		}
+
+
+		#applications{
+
+			margin-top: 5%;
+	        margin-left: 10%;
+	        margin-right: 10%;
+	        color:white;
+	        border: 1px solid red;
+		}
+
+		#applications ul{
+
+			font-size: 21px;
+		}
+
+		#navmenu ul {
+			margin: 0; padding-right: 10px; 
+			list-style-type: none; list-style-image: none; 
+		}
+		#navmenu li {
+			display: inline;
+		}
+		
+		#navmenu ul li a {
+			text-decoration:none;
+			margin: 4px;
+			padding: 5px 20px 5px 20px; 
+			color: red;
+			background: orange;
+		}
+		
+		#navmenu ul li a:hover {
+			color: purple;
+			background: yellow;
+		}
+
+
+
+
+		/*
+DONE		img{
+			position:absolute;
+			right:5px;
+			top:50px;
+			z-index:-1;
+		}
+Done		span {
+    		text-decoration:underline;
+		    color:blue;
+		    cursor:pointer;
+		}
+
+Done		#links{
+
+			padding-left: 1050px;
+			margin-top: -30px;
+		}
+
+Done		#objective{
+
+			margin-top:100px;
+			margin-left : 250px;
+			border: 1px solid red;
+			width:700px;
+			height:300px;
+			color:white;
+		}
+
+Done		#applications{
+
+			margin-top:100px;
+			margin-left : 250px;
+			border: 1px solid red;
+			width:700px;
+			height:300px;
+			color:white;
+		}
+
+Done		#concepts{
+			margin-top:100px;
+			margin-left : 250px;
+			border: 1px solid red;
+			width:700px;
+			height:45hs0px;
+			color:white;
+
+		}
+
+Done		#intro{
+			
+			
+	
+			margin-top:30px;
+			margin-left : 150px;
+			border: 1px solid red;
+			width:1000px;
+			height:550px;
+			color:white;
+
+		}
+
+Done		#brief_description{
+			
+			margin-top:30px;
+			margin-left : 150px;
+			border: 1px solid red;
+			width:1000px;
+			height:550px;
+			color:white;
+
+		}
+
+Done		#code_snippet{
+		
+			margin-top:30px;
+			margin-left : 150px;
+			border: 1px solid red;
+			width:1000px;
+			height:550px;
+			color:white;
+
+		}
+
+Done		#algorithm{
+		
+			margin-top:30px;
+			margin-left : 50px;
+			font-size: 16;
+			border: 1px solid red;
+			width:1100px;
+			height:550px;
+			color:white;
+
+		}
+
+
+DONE		#intro img{
+			position:absolute;
+			right:255px;
+			top: 300px;
+			z-index:-1;
+		}
+
+DONE		#brief_description img, #code_snippet img{
+			position: absolute;
+			right: 255px;
+			top: 200px;
+			z-index: -1;
+			height: 480px;
+			width: 690px;
+
+
+		}
+
+DONE		p{
+			font-size:17px;
+			font-family: helvetica;
+			text-align: center;
+		}
+
+DONE		#navmenu ul {
+			margin: 0; padding-right: 10px; 
+			list-style-type: none; list-style-image: none; 
+		}
+DONE		#navmenu li {
+			display: inline;
+		}
+		
+DONE		#navmenu ul li a {
+			text-decoration:none;
+			margin: 4px;
+			padding: 5px 20px 5px 20px; 
+			color: red;
+			background: orange;}
+		
+DONE		#navmenu ul li a:hover {
+			color: purple;
+			background: yellow;
+			 }
+
+DONE		#objective p{
+			color: white;
+		}
+
+DONE		#applications ul{
+
+			font-size: 21px;
+		}
+
+DONE		#concepts ul{
+
+			font-size: 19px;
+		}
+		*/
+

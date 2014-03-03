@@ -1,0 +1,55 @@
+
+<html>
+  <head>
+    <title>Control Panel Design</title>
+    
+    <style type="text/css">
+      body{
+        background:black;
+        color:#80c0c0;
+        width: 100%;
+      }
+
+ 
+
+      #credentials{
+
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        color:white;
+        border: 1px solid red;
+        text-align: center;
+
+      }
+
+      a{
+     
+        text-decoration: none;
+      
+      }
+
+  </style>
+
+  </head>
+  <body>
+    <form action="../PHP/login_access.php" method="POST">
+      <div id="credentials">
+        <h1>Please Login</h1>
+        <p></p>
+        <p>
+          User Name: <br><input type="text" name="username" size="30"><br>
+        </p>
+        <p>
+          Password: <br><input type="password" name="password" size="30"><br>
+        </p>
+
+        <p>
+          <input type="submit" name="submit" value="Login!">
+        </p>
+      </div>
+
+     
+    </form>
+  </body>
+</html>

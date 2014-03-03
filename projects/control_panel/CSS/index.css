@@ -1,0 +1,59 @@
+
+    body{
+      background:black;
+      color:#80c0c0;
+      width: 100%;
+    }
+
+    #container{
+
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+    }
+
+  
+    #isecurit{
+      
+      float: left;
+      margin-left : 7%;
+      width:28%;
+      height:70%;
+      color:white;
+      border: 1px solid red;
+      text-align: center;
+    }
+
+    #isecurit_projects{
+      
+      float: left;
+      margin-left : 0%;
+      min-width:55%;
+      height:70%;
+      color:white;
+      border: 1px solid red;
+      text-align: center;
+
+    }
+
+    a{
+     
+     text-decoration: none;
+    
+    }
+
+    #host_status{
+      
+      margin-top: 0%;
+      padding-top: 3%;
+      margin-left : 10%;
+      width:83.2%;
+      height:15%;
+      color:white;
+
+      text-align: center;
+      float: left;
+
+
+    }
+
+

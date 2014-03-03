@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<head>
+	<title>SHA1 Implementation</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+
+	<style type="text/css">
+
+	</style>
+
+	<meta http-equiv="refresh" content="1300" />
+
+	<script language="javascript" type="text/javascript" src="../javascript/manual.js"> </script>
+
+</head>
+
+<body>
+
+	<h1>SHA1 Hashing Scheme - Message Digest Algorithm</h1> 
+
+	<div id="links">
+		<span onclick="show('Page1');">1</span>
+		<span onclick="show('Page2');">2</span>
+		<span onclick="show('Page3');">3</span>
+		<span onclick="show('Page4');">4</span>
+		<span onclick="show('Page5');">5</span>
+		<span onclick="show('Page6');">6</span>
+		<span onclick="show('Page7');">7</span>
+		<span onclick="show('Page8');">8</span>
+	</div>
+	
+	<!-- Adding the contents of first Page
+
+	Make a box with heading at top and center and text inside-->
+ 
+	<div id="Page1" class="page" style="">
+	    <h2>SHA1 Hashing scheme</h2>
+	    <div id="objective">
+	    	<h1 align="center">Objectives</h1>
+	    	<p align = "center" style="font-size:17px;">To compute the SHA1 hash of an input string and compare it against modifications</br> Real time authentication application we will be going through</p> 
+	    </div>
+	</div>
+
+	<!-- Adding the contents of second Page 
+
+
+Make a box with heading at top and center and text inside-->
+	<div id="Page2" class="page" style="display:none">
+	    <h2>Key Concepts</h2>
+	    <div id="concepts" >
+	    	<h1 align="center">Key Concepts</h1>
+	    	<ul>
+	    		<li> Computing SHA1 Hash</li>
+	    		<br />								
+	    		<li> One way functions</li>
+	    		<br />
+	    		<li> Integrity checking of values</li>
+	    		<br />
+	    	</ul>
+
+	    	<h1 align="center">Important Properties</h1>
+	    	<ul>
+	    		<li>Each hash is unique but always repeatable</li>
+	    		<br />								
+	    		<li>The function is one way</li>
+	    		<br />
+	    		<li>Algorithm that takes a string of any length and reduces it to a unique fixed length string(160 bits)</li>
+	    		<br />
+	    	</ul>		 
+	    </div>
+	</div>
+	
+
+	<!-- Adding the contents of third Page 
+
+		will cover almost the entire page-->
+	<div id="Page3" class="page" style="display:none">
+	    <h2>Carrying Out Exercise</h2>
+	    <div id="intro">
+	    	<h2 align="center">No of PC's required to run - 1 (could be anything)</h2>
+	    	<p style="font-size:17px">The Hashing algorithm, SHA1, produces 160 bit finger print or message digest of the arbitrary length input. This is used to check data integrity. It is Computationally infeasible to produce two message having a same digest or to produce any message having arbitrary length.</p>
+
+	    	<img src="../images/SHA1.png" alt="SHA broad architecture" width="700px" height="370px">
+
+	    </div>
+	</div>	
+
+<!-- Adding the contents of third Page 
+
+		will cover almost the entire page-->
+
+	<div id="Page4" class="page" style="display:none">
+	    <h2>Algorithm</h2>
+	    <div id="algorithm">
+	    	<p align="center">The following are the steps that are performed to compute the message digest of the message</p>
+	    	<div id="navmenu">
+				<ul>
+					<li><a href="" onmouseover="showDiv('append')" onmouseout="hideDiv('append')">Append With Padding Bits</a></li>
+					<li><a href="" onmouseover="showDiv('length')" onmouseout="hideDiv('length')">Append Length</a></li>
+					<li><a href="" onmouseover="showDiv('initialise')" onmouseout="hideDiv('initialise')">Initialise MD Buffer</a></li>
+					<li><a href="" onmouseover="showDiv('process1')" onmouseout="hideDiv('process1')">Message Schedule</a></li>
+					<li><a href="" onmouseover="showDiv('process2')" onmouseout="hideDiv('process2')">Main Loop</a></li>
+					<li><a href="" onmouseover="showDiv('exercise')" onmouseout="hideDiv('exercise')">Exercise</a></li>					
+					<li><a href="" onmouseover="showDiv('output')" onmouseout="hideDiv('output')">Output</a></li>
+
+				</ul>
+			</div>
+
+			<div id="append" style="display:none">
+				<p>Each character of the input string will be converted from text into ASCII.<br />Convert numbers into binary. Add '1' to the end. Append '0's' to the end.<br /><p>The following thing can be shown with a sample example where the input text is "A Test".</p><p>The steps are as follows:<br />1. Break and covert into ascii and then combine<br />A T e s T<br >65 32 84 101 115 116<br>01000001 00100000 01010100 01100101 01110011 01110100<br>Add1 0100000100100000010101000110010101110011011101001</p><p>2. Append 399 zeros to the end<br></p><p>Zeros will be added to the end until the length of the message is congruent to 448 mod 512. That means that after dividing the message length by 512, the remainder will be 448. For eg.: If your original message is 56 characters long, it would be exactly 448 digits long once converted into binary. After adding the '1' to the end of that, the new message would be 449 characters long. If that were the case you would need to append 575 zero's to make the message congruent to 448%512.
+				If your original message were 64 characters long, it would be exactly 512 digits long once converted into binary. After adding the '1' to the end of that, the new message would be 513 characters long. If that were the case you would need to append 447 zero's to make the message congruent to 448%512. </p>
+			</div>
+
+			<div id="length" style="display:none">
+				<p style="font-size:17px"> Append original message length. This is the last of the 'message padding' steps. You will now add the 64-bit representation of the original message length, in binary, to the end of the current message.</p><p><br>In the example we have considered, our original message was 48 characters long. 48 in binary is expressed as: 110000. However, since the number must be 64-bits or digits long we must now add 58 zero's to the beginning of that number prior to adding it to the current message.<br />Add this after the previous append of 399 zeros<br>000000000000000000000000000000000000000000000000000000000110000</p>
+			</div>
+
+			<div id="initialise" style="display:none">
+				<p style="font-size:17px"> Initialize some variables. There are five variables that needs to be initialized.<br />
+				h0 = 01100111010001010010001100000001<br>
+				h1 = 11101111110011011010101110001001<br>
+				h2 = 10011000101110101101110011111110<br>
+				h3 = 00010000001100100101010001110110<br>
+				h4 = 11000011110100101110000111110000
+				</p>
+			</div>
+
+			<div id="process1" style="display:none">
+				<p style="font-size:17px"> 'Chunk' the message. We will now break the message up into 512 bit chunks. Break the 'Chunk' into 'Words'. Break each chunk up into sixteen 32-bit words.<br />'Extend' into 80 words. This is the first sub-step. Each chunk will be put through a little function that will create 80 words from the 16 current ones.<br /> The function that determines the formation of rest of the words is <br><b>word[i-3] XOR word[i-8] XOR word[i-14] XOR word[i-16] then rotated 1 bit to the left</b></p>
+			</div>
+
+			<div id="process2" style="display:none">
+				<p style="font-size:17px">The main loop. This loop will be run once for each word in succession. Four choices Depending on what number word is being input, one of four functions will be run on it.<br />Words 0-19 go to function 1.<br />Words 20-39 go to function 2<br />Words 40-59 go to function 3<br /> Words 60-79 go to function 4.<br />The first step of function 1 is to set the variable 'f' equal to: (B AND C) or (!B AND D). The second step of function 1 is to set the variable 'k' equal to: 01011010100000100111100110011001.<br />The first step of function 2 is to set the variable 'f' equal to: B XOR C XOR D. The second step of function 2 is to set the variable 'k' equal to: 01101110110110011110101110100001.<br />The first step of function 3 is to set the variable 'f' equal to: (B AND C) OR (B AND D) OR (C AND D). The second step of function 3 is to set the variable 'k' equal to: 10001111000110111011110011011100.<br />Function 4 is exactly the same as function 2 except that we will set 'k' equal to 11001010011000101100000111010110.<br />After completing one of the four functions above, each variable will move on to this step before restarting the loop with the next word. For this step we are going to create a new variable called 'temp' and set it equal to: (A left rotate 5) + F + E + K + (the current word). The only thing left to do at this point is 're-set' some variables then start the loop over. We will be setting the following variables as such:<br />E = D<br />D = C<br />C = B Left Rotate 30<br />B = A<br />A = temp </p>
+			</div>
+
+			<div id="exercise" style="display:none">
+				<p>You are required to fill in the Username and Password and undergo Signup or Login. The backend SHA1 of the "username+password" is going on.<br />The credentials you enter will be checked against the one you enter at the sign of SignUp. All the details in the database or limited to the current session only. Enjoy the Application  </p>
+			</div>
+
+			<div id="output" style="display:none">
+				<p>The end. Once the main loop has finished there is very little left to do. All that's left is to set<br />h0 = h0 + A<br />h1 = h1 + B<br />h2 = h2 + C<br />h3 = h3 + D<br />h4 = h4 + E </p>
+			</div>
+
+	    </div>
+	</div>
+
+	<!-- Adding the contents of third Page 
+
+		will cover almost the entire page-->
+	<div id="Page5" class="page" style="display:none">
+	    <h2>Algortihm Description</h2>
+	    <div id="brief_description">
+	    	<h2 align="center">Steps invloved in brief</h2>
+
+	    	<img src="../images/brief_description.png" alt="Algortihm Steps involved"  >
+
+	    </div>
+	</div>	
+
+	<!-- Adding the contents of third Page 
+
+		will cover almost the entire page-->
+	<div id="Page6" class="page" style="display:none">
+	    <h2>Algortihm Description</h2>
+	    <div id="brief_description">
+	    	<h2 align="center">Algorithm, Constants and function responsible in the SHA1 algortihm</h2>
+
+	    	<img src="../images/roundInternals_sha1.png" alt="Algortihm Steps involved" >
+
+	    </div>
+	</div>	
+
+	<div id="Page7" class="page" style="display:none">
+	    <h2>Algortihm Description</h2>
+	    <div id="code_snippet">
+	    	<h2 align="center">Code Snippet corresponnding to the eighty rounds for 80 words</h2>
+
+	    	<img src="../images/code_snippet.png" alt="Algortihm Steps involved" >
+
+	    </div>
+	</div>	
+
+	<!-- Adding the contents of third Page 
+
+		will cover almost the entire page-->
+	<div id="Page8" class="page" style="display:none">
+	    <h2>Key Concepts</h2>
+	    <div id="applications" >
+	    	<h1 align="center">Real World Applications</h1>
+	    	<ul>
+	    		<li>Ensure data and message integrity</li>
+	    		<br />								
+	    		<li>Password Validity</li>
+	    		<br />
+	    		<li>Basis of many other cryptographic systems</li>
+	    		<br />
+	    	</ul>	 
+	    </div>
+	</div>
+
+
+
+</body>
+
+

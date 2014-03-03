@@ -1,0 +1,67 @@
+
+
+<html>
+  <head>
+    <title>Control Panel Design</title>
+    <style type="text/css">
+	    body{
+	      background:black;
+	      color:#80c0c0;
+	    }
+
+      #restore{
+
+        margin-top: 10%;
+        margin-left: 25%;
+        margin-right: 25%;
+        color:white;
+        border: 1px solid red;
+        text-align: center;
+
+      }
+
+      a{
+     
+        text-decoration: none;
+    
+      }
+
+  	</style>
+
+  </head>
+  <body>
+
+	<div id="restore">
+     	<br>
+     	<p>
+     		<h2>Restore to factory default</h2>
+     		<h3>All user uploaded projects will be lost</h3>
+     	</p>
+     	
+      <br><p></p>	
+      
+      <p>
+        <h3>
+          i-SECURIT
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../PHP/restore.php?isecurit_restore=true" ><input type="button" name="isecurit_restore" id="isecurit_restore" value="RESTORE"></a>
+     	  </h3>
+      </p>
+      
+      <br>
+      
+      <p>
+        <h3>
+          i-SECURIT Projects
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../PHP/restore.php?isecurit_projects_restore=true" ><input type="button" name="isecurit_projects_restore" id="isecurit_projects_restore" value= "RESTORE"> </a>
+        </h3>
+      </p>
+
+      <br>
+    
+    </div>
+
+  </body>
+
