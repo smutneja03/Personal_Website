@@ -1,9 +1,9 @@
-
 <?php
 
 	//base file to contain all the requisite to connect to the mysql_databse	  
 	
 	session_start();  
+
 	  
 	$dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ  
 	$dbname = "login_access"; // the name of the database that you are going to use for this project  

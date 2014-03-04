@@ -1,4 +1,8 @@
+<?php  
+			
+	session_start();  
 
+?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">    
 
@@ -64,9 +68,6 @@
 		</div>
 -->
 		<div id="introduction">  
-			<?php  
-				session_start();  
-			?>
 	
 			<h2>Good Luck <?php echo $_SESSION['user_name'] ?> . May the force be with you.</h2>
 			<a href="logout.php" >

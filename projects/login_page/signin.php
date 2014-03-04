@@ -1,5 +1,8 @@
+<?php
 
-
+	    session_start();
+	
+	?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">    
 
@@ -7,7 +10,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
 		<title>User Page</title>
 
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap.min.css">
 
 		<link rel="shortcut icon" href="favicon.ico">
 
@@ -61,14 +64,11 @@
 		<div class="container">
 
 	      <form class="form-signin" role="form" action="log.php" method="POST">
+	      
 
-	      	<?php  
-
-				session_start();  
-
-			?>
-	
 			<h2 class="form-signin-heading">Welcome <?php echo $_SESSION['user_name'] ?> </h2> 
+
+
 		</div>
 		
 		<div id="questions">

@@ -1,5 +1,3 @@
-
-
 <?php
 	
 	include "base.php";	
@@ -25,11 +23,11 @@
 
         $row = mysql_fetch_array($checklogin);  
         $email = $row['email_address'];  
-          
+              
         $_SESSION['user_name'] = $username;  
         $_SESSION['email_address'] = $email;  
         $_SESSION['LoggedIn'] = 1;  
-          
+
 			  echo "<script>window.location = 'signin.php'</script>";
 
     }  
