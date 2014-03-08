@@ -18,26 +18,36 @@
 
 		<link rel="shortcut icon" href="images/favicon.ico">
 
-	    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+	    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+		
+	    <link href="css/contact.css" rel="stylesheet">
 
-		<style type="text/css">
+ 		
+ 		<style type="text/css">
 
-	      .inner p, a{
+	     
+	      .inner a:hover{
 
-	        color: black;
-	        text-shadow:0 1px 3px rgba(0, 0, 0, .5);
-	        font-size: 14px;
+       	 	color: #2a6496;
+        	text-decoration: underline;
+      	  }
 
-	      }
+     	  .btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open .dropdown-toggle.btn-default{color:#333;background-color:#ebebeb;border-color:#adadad}.btn-default:active,.btn-default.active,.open .dropdown-toggle.btn-default{background-image:none}.btn-default.disabled,.btn-default[disabled],fieldset[disabled] .btn-default,.btn-default.disabled:hover,.btn-default[disabled]:hover,fieldset[disabled] .btn-default:hover,.btn-default.disabled:focus,.btn-default[disabled]:focus,fieldset[disabled] .btn-default:focus,.btn-default.disabled:active,.btn-default[disabled]:active,fieldset[disabled] .btn-default:active,.btn-default.disabled.active,.btn-default[disabled].active,fieldset[disabled] .btn-default.active{background-color:#fff;border-color:#ccc}
 
-	      .mastfoot{
+     	  .col-lg-2, .col-lg-10, .panel-heading{
+     	  	
+     	  	color: #333;
+     	  	text-shadow: none;
+     	  }
 
-	        margin-bottom: 2%;
-	        margin-top: 14%;
-	        bottom: 0;
-	        width: 100%;
-	        text-align: center;
-	      }
+     	  .panel-heading{
+     	  	text-align: left;
+     	  }
+
+     	  .col-lg-offset-2{
+
+     	  	text-align: left;
+     	  }
 
 
 	    </style>
@@ -46,93 +56,108 @@
 
 	<body style="background:#C0C0C0">
 
-		<div style="margin-top:7%">
-		
-			<div class="container">
-		
-				<div class="panel panel-default" style="margin:0 auto;width:500px">
-		
-					<div class="panel-heading">
-						<h2 class="panel-title">Contact Form</h2>
-					</div>
-		
-					<div class="panel-body">
-		
-						<form name="contactform" method="post" action="PHP/mailer.php" class="form-horizontal" role="form">
-		
-							<div class="form-group">
-		
-								<label for="inputName" class="col-lg-2 control-label">Name</label>
-		
-								<div class="col-lg-10">
-		
-									<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name">
-		
-								</div>
-		
-							</div>
-		
+		<div class="site-wrapper">
 
-							<div class="form-group">
-		
-								<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-		
-								<div class="col-lg-10">
-		
-									<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
-		
-								</div>
-		
-							</div>
-		
-							<div class="form-group">
-		
-								<label for="inputSubject" class="col-lg-2 control-label">Subject</label>
-		
-								<div class="col-lg-10">
-		
-									<input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message">
-		
-								</div>
-		
-							</div>
-		
-							<div class="form-group">
-		
-								<label for="inputPassword1" class="col-lg-2 control-label">Message</label>
-		
-								<div class="col-lg-10">
-		
-									<textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..."></textarea>
-		
-								</div>
-		
-							</div>
-		
-							<div class="form-group">
-		
-								<div class="col-lg-offset-2 col-lg-10">
-		
-									<button type="submit" class="btn btn-default">
-		
-										Send Message
-		
-									</button>
-		
-								</div>
-		
-							</div>
-		
-						</form>
+      <div class="site-wrapper-inner">
 
-					</div>
-				
+        <div class="cover-container">
 
-				</div>
-			
-			</div>
-		
-		</div>
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Sahil Mutneja</h3>
+              <ul class="nav masthead-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://smutneja07.wordpress.com/" target="_blank">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            
+            <div class="panel panel-default" style="margin:0 auto;width:500px">
+    
+          <div class="panel-heading">
+            <h2 class="panel-title">Contact Form</h2>
+          </div>
+    
+          <div class="panel-body">
+    
+            <form name="contactform" method="post" action="PHP/mailer.php" class="form-horizontal" role="form">
+    
+              <div class="form-group">
+    
+                <label for="inputName" class="col-lg-2 control-label">Name</label>
+    
+                <div class="col-lg-10">
+    
+                  <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name">
+    
+                </div>
+    
+              </div>
+    
+
+              <div class="form-group">
+    
+                <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+    
+                <div class="col-lg-10">
+    
+                  <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
+    
+                </div>
+    
+              </div>
+    
+              <div class="form-group">
+    
+                <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+    
+                <div class="col-lg-10">
+    
+                  <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message">
+    
+                </div>
+    
+              </div>
+    
+              <div class="form-group">
+    
+                <label for="inputPassword1" class="col-lg-2 control-label">Message</label>
+    
+                <div class="col-lg-10">
+    
+                  <textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..."></textarea>
+    
+                </div>
+    
+              </div>
+    
+              <div class="form-group">
+    
+                <div class="col-lg-offset-2 col-lg-10">
+    
+                  <button type="submit" class="btn btn-default">
+    
+                    Send Message
+    
+                  </button>
+    
+                </div>
+    
+              </div>
+    
+            </form>
+
+          </div>
+        
+
+        </div>
+
+            </div>
+
 
 		<div class="mastfoot">
       		<div class="inner">
