@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Registration Form</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+      <!-- Include Bootstrap Asserts JavaScript Files. -->
+      <script src="assets/js/jquery.js"></script>
+      <script src="assets/js/bootstrap-transition.js"></script>
+      <script src="assets/js/bootstrap-alert.js"></script>
+      <script src="assets/js/bootstrap-modal.js"></script>
+      <script src="assets/js/bootstrap-dropdown.js"></script>
+      <script src="assets/js/bootstrap-scrollspy.js"></script>
+      <script src="assets/js/bootstrap-tab.js"></script>
+      <script src="assets/js/bootstrap-tooltip.js"></script>
+      <script src="assets/js/bootstrap-popover.js"></script>
+      <script src="assets/js/bootstrap-button.js"></script>
+      <script src="assets/js/bootstrap-collapse.js"></script>
+      <script src="assets/js/bootstrap-carousel.js"></script>
+      <script src="assets/js/bootstrap-typeahead.js"></script>
+
+
+      <!--Date Picker Plugins and Javascript Files-->
+      <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
+
+      <link rel="stylesheet" href="code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+      <script>
+        $(function() {
+          $('#dob').datepicker({
+          onSelect: function(value, ui) {
+            var today = new Date(), 
+            dob = new Date(value), 
+            age = new Date(today - dob).getFullYear() - 1970;
+        
+            $('#age').val(age);
+          },
+          maxDate: '+0d',
+          yearRange: '1920:2010',
+          changeMonth: true,
+          changeYear: true          
+          });
+        });
+
+      </script>
+
+       <!-- Include Bootstrap Asserts JavaScript Files. -->
+      
+      <script src="assets/js/bootstrap-scrollspy.js"></script>
+      <script src="assets/js/bootstrap-tab.js"></script>
+      <script src="assets/js/bootstrap-tooltip.js"></script>
+      <script src="assets/js/bootstrap-popover.js"></script>
+      <script src="assets/js/bootstrap-button.js"></script>
+      <script src="assets/js/bootstrap-collapse.js"></script>
+      <script src="assets/js/bootstrap-carousel.js"></script>
+      <script src="assets/js/bootstrap-typeahead.js"></script>
+
+      <script type="text/javascript" src="jquery.validate.js"></script> 
+      <script type="text/javascript" src="validate.js"></script>
+
+      <script>
+        function AutoFill(f) {
+          if(f.p_check.checked == true) {
+            f.p_locality.value = f.locality.value;
+            f.p_city.value = f.city.value;
+            f.p_country.value = f.country.value;
+            f.p_district.value = f.district.value;
+            f.p_pin.value = f.pin.value;
+            f.p_state.value = f.state.value;
+
+          }
+        }
+
+      </script>
+      
+    </head>
+    
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+
+            <form class="form-horizontal" id="registerHere" method='post' action='registration.php'>
+            <fieldset>
+
+              <legend>Registration</legend>
+
+              <div class="control-group ">
+                <label class="control-label">First Name</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="first_name" name="first_name" rel="popover" data-content="Enter your first name as per Matriculation Certificate." data-original-title="First Name">
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Middle Name</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="middle_name" name="middle_name" rel="popover" data-content="Enter your middle name as per Matriculation Certificate." data-original-title="Middle Name">
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Last Name</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="last_name" name="last_name" rel="popover" data-content="Enter your Last Name as per Matriculation Certificate." data-original-title="Last Name">
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Correspondence Address</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="locality" name="locality" placeholder="Street No./House No./Locality" ><br>
+                  <input type="text" class="input-xlarge" id="city" name="city" placeholder="Village/PS/City" ><br>
+                  <input type="text" class="input-xlarge" id="country" name="country" placeholder="Country" ><br>
+                  <input type="text" class="input-xlarge" id="state" name="state" placeholder="State" ><br>
+                  <input type="text" class="input-xlarge" id="district" name="district" placeholder="District" ><br>
+                  <input type="text" class="input-xlarge" id="pin" name="pin" placeholder="Pin Number" ><br>
+
+                </div>
+              </div>
+              
+              <div class="control-group">
+                <label class="control-label">Permanent Address
+                  <p></p>
+                  <input type="checkbox" class="input-xlarge" id="p_check" name="p_check" onclick="AutoFill(this.form)">Same as Correspondence Address
+
+                </label>
+
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="p_locality" name="p_locality" placeholder="Street No./House No./Locality" ><br>
+                  <input type="text" class="input-xlarge" id="p_city" name="p_city" placeholder="Village/PS/City" ><br>
+                  <input type="text" class="input-xlarge" id="p_country" name="p_country" placeholder="Country" ><br>
+                  <input type="text" class="input-xlarge" id="p_state" name="p_state" placeholder="State" ><br>
+                  <input type="text" class="input-xlarge" id="p_district" name="p_district" placeholder="District" ><br>
+                  <input type="text" class="input-xlarge" id="p_pin" name="p_pin" placeholder="Pin Number" ><br>  
+
+                </div>
+              </div>
+              <br>
+
+              <div class="control-group ">
+                <label class="control-label">Date of Birth</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="dob" name="dob" >
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Age</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="age" name="age" >
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Mobile Number</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="mobile" name="mobile" >
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Email</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" id="email" name="email" >
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Password</label>
+                <div class="controls">
+                  <input type="password" class="input-xlarge" id="pwd" name="pwd" >
+                </div>
+              </div>
+
+              <div class="control-group ">
+                <label class="control-label">Confirm Password</label>
+                <div class="controls">
+                  <input type="password" class="input-xlarge" id="cpwd" name="cpwd">
+                </div>
+              </div>
+
+
+              <div class="control-group">
+                <label class="control-label"></label>
+                <div class="controls">
+                  <button type="submit" class="btn btn-success">Submit</button>
+                  <button type="submit" class="btn btn-success" onclick="document.getElementById('registerHere').reset();">Reset</button>
+
+                </div>
+              </div>
+
+            </fieldset>
+            </form> 
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
+
